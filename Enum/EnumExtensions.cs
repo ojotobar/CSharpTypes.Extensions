@@ -5,10 +5,10 @@ namespace CSharpTypes.Extensions.Enum
     public static class EnumExtensions
     {
         /// <summary>
-        /// 
+        /// Gets the description from the description applied to a member type
         /// </summary>
         /// <param name="value"></param>
-        /// <returns></returns>
+        /// <returns>String representing the description of the member type</returns>
         /// <exception cref="ArgumentException"></exception>
         public static string GetDescription(this System.Enum value)
         {
@@ -21,23 +21,23 @@ namespace CSharpTypes.Extensions.Enum
         }
 
         /// <summary>
-        /// 
+        /// Checks if the object type is defined in the enum passed as the generic type parameter
         /// </summary>
         /// <typeparam name="TEnum"></typeparam>
         /// <param name="value"></param>
-        /// <returns></returns>
+        /// <returns>True/False</returns>
         public static bool IsInEnum<TEnum>(this object value) where TEnum : System.Enum
         {
             return System.Enum.IsDefined(typeof(TEnum), value);
         }
 
         /// <summary>
-        /// 
+        /// Try to convert the string representation to the defined enum
         /// </summary>
         /// <typeparam name="TEnum"></typeparam>
         /// <param name="value"></param>
         /// <param name="enum"></param>
-        /// <returns></returns>
+        /// <returns>true if the conversion succeeds, false otherwise</returns>
         public static bool TryParseValue<TEnum>(this string value, out TEnum @enum) where TEnum : System.Enum
         {
             @enum = default!;
@@ -47,12 +47,12 @@ namespace CSharpTypes.Extensions.Enum
         }
 
         /// <summary>
-        /// 
+        /// Tries to convert the integer representation to the defined enum
         /// </summary>
         /// <typeparam name="TEnum"></typeparam>
         /// <param name="target"></param>
         /// <param name="enum"></param>
-        /// <returns></returns>
+        /// <returns>True if the conversion succeeds, false otherwise</returns>
         public static bool TryParseValue<TEnum>(this int target, out TEnum @enum) where TEnum : System.Enum
         {
             @enum = default!;
