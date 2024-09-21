@@ -18,5 +18,5 @@ Check out the [Github Repository](https://github.com/ojotobar/CSharpTypesExtensi
 ## Links
 ***
 To view the source code or get in touch:
-* [Github Repository Link](https://github.com/ojotobar/CSharpTypesExtensions)
+* [Github Repository Link](https://github.com/ojotobar/CSharpTypes.Extensions)
 * [Send Me A Mail](mailto:ojotobar@gmail.com)
